@@ -18,13 +18,33 @@ fox = ["   /\   /\  /","\
     _[ [ \  /_/"]
 def what_the_fox_say(fword):
     fox_word = fword
-    print("___________________________________________________________________")
+    new_string = ""
     if len(fox_word) < 65:
-        new_string = ""
+        print("___________________________________________________________________")
         for i in range(0,65-len(fox_word)):
             new_string += " "
         print("| " + fox_word + new_string + "|")
-    print("|__________________________________________________________________|")
+        print("|__________________________________________________________________|")
+    elif len(fox_word) >= 65:
+        print("_______________________________________________________________________________________________________")
+        new_foxy = fox_word.split()
+        fox_index = 0
+        while fox_index < len(new_foxy)-1:
+            fox_number = 0
+            fox_string = ""
+            while fox_number < 90 and fox_index < len(new_foxy)-1:
+                if len(new_foxy[fox_index]) < 40:
+                    fox_string += " "
+                    fox_string += new_foxy[fox_index]
+                    fox_index += 1
+                    fox_number += 1
+                else:
+                    fox_string += "big words"
+                fox_number += len(new_foxy[fox_index])
+            for n in range(0,100-len(fox_string)):
+                fox_string += " "
+            print("| " + fox_string + new_string + " |")
+        print("_______________________________________________________________________________________________________")
     print(fox[0])
     print(fox[1])
     for i in range(2,9):
@@ -46,9 +66,7 @@ def random_word_generator(number_input):
             new_random_number = random.randint(0, 3)
             random_index += str(random_word + random_punc[new_random_number])
     return random_index
-
 if __name__ == '__main__':
     quote = random_python_quote()
     what_the_fox_say(quote)
-    what_the_fox_say("Highty, highty, highty, ho! A he-ah-he-ah-he! A he-ah-he-ah-he! A he-ah-he-ah-he! A he-ah-he-ah-he! AWOOOOOOOO!")
-    what_the_fox_say(random_word_generator(5))
+    what_the_fox_say(random_word_generator(1))

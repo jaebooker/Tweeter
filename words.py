@@ -49,6 +49,19 @@ def what_the_fox_say(fword):
     print(fox[1])
     for i in range(2,9):
         print(fox[i])
+def fisher_python(words):
+  t = ""
+  i = 0
+  m = len(words)
+  while (m):
+    m -= 1
+    i = random.randint(0,m)
+    t = words[m]
+    words[m] = words[i]
+    words[i] = t
+  return words
+
+  return number
 def random_python_quote():
     rand_index = random.randint(0, len(quotes) - 1)
     return quotes[rand_index]
@@ -69,4 +82,5 @@ def random_word_generator(number_input):
 if __name__ == '__main__':
     quote = random_python_quote()
     what_the_fox_say(quote)
-    what_the_fox_say(random_word_generator(1))
+    what_the_fox_say(random_word_generator(5))
+    print(fisher_python(["words", "notwords", "wordy", "worthy"]))

@@ -13,13 +13,15 @@ def random_word_generator(number_input):
     with open('./words.txt') as w:
         rwords = w.read().split()
     random_index = ""
+    random_punc = [".","?","!","..."]
     for i in range(0,number_input):
         random_number = random.randint(0, len(rwords) - 1)
         random_word = rwords[random_number]
         if i != number_input-1:
             random_index += str(random_word + " ")
         else:
-            random_index += str(random_word + "!")
+            new_random_number = random.randint(0, 4)
+            random_index += str(random_word + random_punc[new_random_number])
     print(random_index)
 
 if __name__ == '__main__':

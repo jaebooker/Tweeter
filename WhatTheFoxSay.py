@@ -1,3 +1,5 @@
+import sys
+
 fox_word = ""
 #Image below thanks to some guy named Todd Vargo... so thanks, Todd
 fox = ["   /\   /\  /","\
@@ -42,3 +44,11 @@ def what_the_fox_say(fword):
     print(fox[1])
     for i in range(2,9):
         print(fox[i])
+
+if __name__ == '__main__':
+    params = sys.argv[1:]
+    fox_quote = ""
+    for i in range(0,len(params)):
+        fox_quote += str(params[i])
+        fox_quote += str(" ")
+    what_the_fox_say(fox_quote)

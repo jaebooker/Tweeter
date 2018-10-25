@@ -7,8 +7,8 @@ quotes = ("Always look on the bright side of life.",
           "THIS... IS AN EX-PARROT!!")
 fox_word = ""
 #Image below thanks to some guy named Todd Vargo... so thanks, Todd
-fox = ["   /\   /\ ","\
-  //\\_//\\  _","\
+fox = ["   /\   /\  /","\
+  //\\_//\\  /","\
   \_     _/    /   /","\
    / * * \    /^^^]","\
    \_\O/_/    [   ]","\
@@ -18,8 +18,15 @@ fox = ["   /\   /\ ","\
     _[ [ \  /_/"]
 def what_the_fox_say(fword):
     fox_word = fword
+    print("___________________________________________________________________")
+    if len(fox_word) < 65:
+        new_string = ""
+        for i in range(0,65-len(fox_word)):
+            new_string += " "
+        print("| " + fox_word + new_string + "|")
+    print("|__________________________________________________________________|")
     print(fox[0])
-    print(fox[1] + fox_word)
+    print(fox[1])
     for i in range(2,9):
         print(fox[i])
 def random_python_quote():
@@ -43,4 +50,5 @@ def random_word_generator(number_input):
 if __name__ == '__main__':
     quote = random_python_quote()
     what_the_fox_say(quote)
+    what_the_fox_say("Highty, highty, highty, ho! A he-ah-he-ah-he! A he-ah-he-ah-he! A he-ah-he-ah-he! A he-ah-he-ah-he! AWOOOOOOOO!")
     what_the_fox_say(random_word_generator(5))

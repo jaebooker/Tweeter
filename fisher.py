@@ -1,8 +1,6 @@
 import random
 
 def fisher_python(words):
-  t = ""
-  i = 0
   m = len(words)
   while (m):
     m -= 1

@@ -20,3 +20,12 @@ def unique_words(histogram):
     return len(histogram)
 def frequency(word, histogram):
     return histogram[word]
+def create_sorted_array(histogram):
+    new_array = []
+    count = 0
+    for i in histogram:
+        new_array.append([histogram[i]])
+        new_array[count].append(i)
+        count += 1
+    new_array.sort()
+    return new_array

@@ -1,6 +1,8 @@
+import re
 fishy_python = "one fish, two fish, red fish, blue fish, you dish"
 def histogram(words):
-    words_list = words.split()
+    words_list = re.split("(?:(?:[^a-zA-Z]+')|(?:'[^a-zA-Z]+))|(?:[^a-zA-Z']+)", words)
+    #thanks to Martijn Pieters for the above split
     word_dictionary = {}
     counter = len(words_list)-1
     i = 0
@@ -15,9 +17,10 @@ def histogram(words):
             n += 1
         i += 1
     return word_dictionary
-
+print((histogram(fishy_python)))
 def unique_words(histogram):
     return len(histogram)
 print(unique_words(histogram(fishy_python)))
 def frequency(word, histogram):
-    pass
+    return histogram[word]
+print(frequency("fish", histogram(fishy_python)))

@@ -3,7 +3,7 @@ def histogram(words):
     words_list = re.split("(?:(?:[^a-zA-Z]+')|(?:'[^a-zA-Z]+))|(?:[^a-zA-Z']+)", words)
     #thanks to Martijn Pieters for the above split
     word_dictionary = {}
-    counter = len(words_list)-1
+    counter = len(words_list)
     i = 0
     while i < counter:
         word_dictionary[words_list[i]] = 1

@@ -16,8 +16,8 @@ def histogram(words):
         i += 1
     return word_dictionary
 
-print(histogram(fishy_python))
 def unique_words(histogram):
-    pass
+    return len(histogram)
+print(unique_words(histogram(fishy_python)))
 def frequency(word, histogram):
     pass

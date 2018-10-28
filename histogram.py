@@ -13,6 +13,7 @@ def histogram(words):
                 word_dictionary[words_list[i]] += 1
                 words_list.pop(n)
                 counter -= 1
+                n -= 1
             n += 1
         i += 1
     return word_dictionary

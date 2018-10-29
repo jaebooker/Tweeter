@@ -9,6 +9,3 @@ def fisher_python(words):
     words[m] = words[i]
     words[i] = t
   return words
-
-words = ["Blue", "One", "Fish", "Red"]
-print(fisher_python(words))

@@ -11,3 +11,14 @@ def random_spinner(min_range, max_range):
         else:
             start_point = min_range
     return start_point
+
+def random_int_spinner(min_range, max_range):
+    time_add = 1
+    start_point = min_range
+    start_time = time.time()
+    while (time.time()-start_time) < 0.00011:
+        if start_point < max_range:
+            start_point += time_add
+        else:
+            start_point = min_range
+    return start_point

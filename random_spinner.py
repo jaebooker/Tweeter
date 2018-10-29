@@ -11,5 +11,3 @@ def random_spinner(min_range, max_range):
         else:
             start_point = min_range
     return start_point
-
-print(random_spinner(2,200))

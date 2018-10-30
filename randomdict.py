@@ -1,6 +1,6 @@
 from random_spinner import *
 def random_word_generator(number_input):
-    with open('./words.txt') as w:
+    with open('words.txt') as w:
         rwords = w.read().split()
     random_index = ""
     random_punc = [".","?","!","..."]

@@ -12,5 +12,5 @@ if __name__ == '__main__':
     what_the_fox_say(quote)
     what_the_fox_say(random_word_generator(5))
     # print(fisher_python(["words", "notwords", "wordy", "worthy"]))
+    # print(random_word_generator(100))
     print(time.time()-stime)
-    # print(random_word_generator(5))

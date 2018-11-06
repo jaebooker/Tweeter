@@ -1,6 +1,7 @@
 import re
 def histogram(words):
-    words_list = re.split("(?:(?:[^a-zA-Z]+')|(?:'[^a-zA-Z]+))|(?:[^a-zA-Z']+)", words)
+    #words_list = re.split("(?:(?:[^a-zA-Z]+')|(?:'[^a-zA-Z]+))|(?:[^a-zA-Z']+)", words)
+    words_list = re.split("\W*[^\'\w+\']", words)
     #thanks to Martijn Pieters for the above split
     word_dictionary = {}
     counter = len(words_list)

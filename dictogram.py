@@ -17,11 +17,11 @@ class Dictogram(dict):
 
     def add_count(self, word, count=1):
         """Increase frequency count of given word by given count amount."""
-        if self in word:
-            self[word] += 1
-        else:
+        if word not in self:
             self[word] = count
             self.types += 1
+        else:
+            self[word] = 1
         self.tokens += 1
         # TODO: Increase word frequency by count
 

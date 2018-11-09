@@ -1,5 +1,9 @@
+from flask import Flask
 from histogram import *
 from random_sentence import *
+app = Flask(__name__)
+
+@app.route("/")
 with open('./holmes.txt') as w:
     holmes_text = w.read()
 histo_holmes = create_sorted_array(histogram(holmes_text))

@@ -22,11 +22,11 @@ class Listogram(list):
         self.tokens += count
         for w in range(0, len(self)):
             if self[w][0] == word:
-                self[w][1] += 1
+                self[w][1] += count
                 return
         index = len(self)
         self.append([word])
-        self[index].append(1)
+        self[index].append(count)
         self.types += 1
 
     def frequency(self, word):

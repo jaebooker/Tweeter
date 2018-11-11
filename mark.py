@@ -27,5 +27,5 @@ def markdown_unchained(word_list, random_next_word):
     else:
         return None
 
-wlist = ['one', 'fish', 'two', 'fish', 'red', 'fish', 'blue', 'fish', 'pasta']
-print(markdown(wlist, 10))
+# wlist = ['one', 'fish', 'two', 'fish', 'red', 'fish', 'blue', 'fish', 'pasta']
+# print(markdown(wlist, 10))

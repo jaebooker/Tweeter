@@ -103,7 +103,7 @@ class LinkedList(object):
                 node.previous.next = node.next
                 return "item deleted"
             node = node.next
-        return ValueError('Item not found: {}'.format(item)
+        return ValueError('Item not found: {}'.format(item))
 
 
 def test_linked_list():

@@ -66,7 +66,8 @@ class LinkedList(object):
         # TODO: Create new node to hold given item
         # TODO: Append node after tail, if it exists
         if self.tail:
-            self.append(item)
+            new = self.append(item)
+            self.tail = new
 
     def prepend(self, item):
         """Insert the given item at the head of this linked list.
@@ -89,6 +90,8 @@ class LinkedList(object):
                 return node
             node = node.next
         return None
+
+        #return self.find(lambda data: data == quality)
 
     def delete(self, item):
         """Delete the given item from this linked list, or raise ValueError.

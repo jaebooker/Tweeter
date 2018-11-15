@@ -54,6 +54,7 @@ class LinkedList(object):
         TODO: Running time: O(???) Why and under what conditions?"""
         # TODO: Loop through all nodes and count one for each
         counter = 0
+        node = self.head
         while node is not None:
             counter += 1
             node = node.next
@@ -83,6 +84,11 @@ class LinkedList(object):
         TODO: Worst case running time: O(???) Why and under what conditions?"""
         # TODO: Loop through all nodes to find item where quality(item) is True
         # TODO: Check if node's data satisfies given quality function
+        while node is not none:
+            if node.data == quality:
+                return node
+            node = node.next
+        return None
 
     def delete(self, item):
         """Delete the given item from this linked list, or raise ValueError.
@@ -92,6 +98,13 @@ class LinkedList(object):
         # TODO: Update previous node to skip around node with matching data
         # TODO: Otherwise raise error to tell user that delete has failed
         # Hint: raise ValueError('Item not found: {}'.format(item))
+        while node is not none:
+            if node.data == quality:
+                node.previous.next = node.next
+                return "item deleted"
+            node = node.next
+        return ValueError('Item not found: {}'.format(item)
+
 
 def test_linked_list():
     ll = LinkedList()

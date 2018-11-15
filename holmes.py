@@ -9,7 +9,7 @@ from mark import *
 with open('./holmes.txt') as w:
     holmes_text = w.read()
 word_list = re.split("\W*[^\'\w+\']", holmes_text)
-holmes_sentence = markdown(word_list, 12)
+holmes_sentence = markdown(word_list, 20)
 holmes_string = ""
 for i in holmes_sentence:
     holmes_string += " "

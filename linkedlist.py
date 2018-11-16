@@ -92,16 +92,28 @@ class LinkedList(object):
         """Delete the given item from this linked list, or raise ValueError.
         TODO: Best case running time: O(???) Why and under what conditions?
         TODO: Worst case running time: O(???) Why and under what conditions?"""
-        # TODO: Loop through all nodes to find one whose data matches given item
-        # TODO: Update previous node to skip around node with matching data
-        # TODO: Otherwise raise error to tell user that delete has failed
-        # Hint: raise ValueError('Item not found: {}'.format(item))
-        while node is not none:
-            if node.data == quality:
-                node.previous.next = node.next
-                return "item deleted"
-            node = node.next
-        return ValueError('Item not found: {}'.format(item))
+        if self.head != None:
+            node1 = self.head
+        if self.head.next != None:
+            node2 = self.head.next
+            while node2 != None:
+                if node2.data == item:
+                    if node2.next != None:
+                        node1.next = node2.next
+                    else:
+                        node1.next = None
+                        self.tail = node1
+                    return "item deleted"
+                node1 = node1.next
+                node2 = node2.next
+            raise ValueError('Item not found: {}'.format(item))
+        else:
+            if self.head.data == item:
+                self.head = None
+                if self.tail != None:
+                    self.tail = None
+                return "item and linked list deleted"
+            raise ValueError('Item not found: {}'.format(item))
 
 
 def test_linked_list():
@@ -119,7 +131,7 @@ def test_linked_list():
     print('length: {}'.format(ll.length()))
 
     # Enable this after implementing delete method
-    delete_implemented = False
+    delete_implemented = True
     if delete_implemented:
         print('\nTesting delete:')
         for item in ['B', 'C', 'A']:

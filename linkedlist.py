@@ -52,22 +52,21 @@ class LinkedList(object):
     def length(self):
         """Return the length of this linked list by traversing its nodes.
         TODO: Running time: O(???) Why and under what conditions?"""
-        # TODO: Loop through all nodes and count one for each
         counter = 0
-        node = self.head
-        while node is not None:
+        for i in self.items():
             counter += 1
-            node = node.next
         return counter
 
     def append(self, item):
         """Insert the given item at the tail of this linked list.
         TODO: Running time: O(???) Why and under what conditions?"""
-        # TODO: Create new node to hold given item
-        # TODO: Append node after tail, if it exists
-        if self.tail:
-            new = self.append(item)
-            self.tail = new
+        new_node = Node(item)
+        if self.is_empty():
+            if self.tail != None:
+                self.tail.next = new_node
+        else:
+            self.head = new_node
+        self.tail = new_node
 
     def prepend(self, item):
         """Insert the given item at the head of this linked list.
@@ -83,11 +82,9 @@ class LinkedList(object):
         """Return an item from this linked list satisfying the given quality.
         TODO: Best case running time: O(???) Why and under what conditions?
         TODO: Worst case running time: O(???) Why and under what conditions?"""
-        # TODO: Loop through all nodes to find item where quality(item) is True
-        # TODO: Check if node's data satisfies given quality function
         while node is not none:
-            if node.data == quality:
-                return node
+            if quality(node.data) == True:
+                return node.data
             node = node.next
         return None
 

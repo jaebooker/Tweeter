@@ -82,7 +82,11 @@ class LinkedList(object):
         """Return an item from this linked list satisfying the given quality.
         TODO: Best case running time: O(???) Why and under what conditions?
         TODO: Worst case running time: O(???) Why and under what conditions?"""
-        while node is not none:
+        if self.head != None:
+            node = self.head
+        else:
+            return None
+        while node != None:
             if quality(node.data) == True:
                 return node.data
             node = node.next
@@ -96,6 +100,8 @@ class LinkedList(object):
         TODO: Worst case running time: O(???) Why and under what conditions?"""
         if self.head != None:
             node1 = self.head
+        else:
+            raise ValueError('Item not found: {}'.format(item))
         if self.head.next != None:
             if self.head.data == item:
                 self.head = self.head.next

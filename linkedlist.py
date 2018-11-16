@@ -74,6 +74,8 @@ class LinkedList(object):
         new_node = Node(item)
         if self.head != None:
             new_node.next = self.head
+        if self.tail == None:
+            self.tail = new_node
         self.head = new_node
 
     def find(self, quality):
@@ -95,6 +97,11 @@ class LinkedList(object):
         if self.head != None:
             node1 = self.head
         if self.head.next != None:
+            if self.head.data == item:
+                self.head = self.head.next
+                if self.head.next == None:
+                    self.tail = self.head
+                return "item deleted at head"
             node2 = self.head.next
             while node2 != None:
                 if node2.data == item:

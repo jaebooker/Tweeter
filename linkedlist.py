@@ -72,10 +72,9 @@ class LinkedList(object):
         """Insert the given item at the head of this linked list.
         TODO: Running time: O(???) Why and under what conditions?"""
         new_node = Node(item)
-        if self.head != none:
-            temp = self.head
-            self.head = new_node
-            self.head.next = temp
+        if self.head != None:
+            new_node.next = self.head
+        self.head = new_node
 
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality.

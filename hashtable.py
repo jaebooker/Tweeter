@@ -39,8 +39,8 @@ class HashTable(object):
         TODO: Running time: O(???) Why and under what conditions?"""
         all_buckets = []
         for bucket in self.buckets:
-            for key, value in bucket.items();
-            all_buckets.append(value)
+            for key, value in bucket.items():
+                all_buckets.append(value)
         return all_buckets
 
     def items(self):
@@ -74,7 +74,7 @@ class HashTable(object):
         for bucket_key, bucket_value in bucket.items:
             if bucket_key == key:
                 return bucket_value
-        return raise KeyError('Key not found: {}'.format(key))
+        raise KeyError('Key not found: {}'.format(key))
 
     def set(self, key, value):
         """Insert or update the given key with its associated value.
@@ -83,7 +83,7 @@ class HashTable(object):
             if bucket_key == key:
                 bucket_value = value
                 return
-        return raise KeyError('Key not found: {}'.format(key))
+        raise KeyError('Key not found: {}'.format(key))
 
     def delete(self, key):
         """Delete the given key from this hash table, or raise KeyError.

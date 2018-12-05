@@ -87,7 +87,7 @@ class HashTable(object):
         bucket = self.buckets[index]
         #entry = bucket.find(lambda bucket_key_value: bucket_key_value[0] == key)
         if self.contains(key):
-            bucket.delete(key)
+            self.delete(key)
             # self.size -= 1
         bucket.prepend((key, value))
         #self.size += 1

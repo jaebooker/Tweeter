@@ -1,6 +1,6 @@
 import re
-from mark import *
-from markdown_mark2 import *
+from markov import *
+from markov2 import *
 #from flask import Flask
 #from histogram import *
 #from random_sentence import *

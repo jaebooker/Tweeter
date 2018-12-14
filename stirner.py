@@ -1,7 +1,7 @@
 import re
 import random
-from mark import *
-from markdown_mark2 import *
+from markov import *
+from markov2 import *
 #from flask import Flask
 #from histogram import *
 #from random_sentence import *
@@ -20,5 +20,5 @@ stirner_sentence = markdown2(word_list, 20)
 stirner_string = ""
 for i in stirner_sentence:
     stirner_string += " "
-    stirner_string += i
+    stirner_string += i.lower()
 print(trend_word + stirner_string)

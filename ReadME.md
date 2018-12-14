@@ -10,3 +10,5 @@ Words.
                             Look.
                                 At.
                                     Words.
+
+for words that are random, there is holmes.py and stirner.py

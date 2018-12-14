@@ -81,7 +81,7 @@ class LinkedList(object):
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality.
         TODO: Best case running time: O(1) quality at beginning
-        TODO: Worst case running time: O(l) quality at end"""
+        TODO: Worst case running time: O(n) quality at end"""
         if self.head != None:
             node = self.head
         else:
